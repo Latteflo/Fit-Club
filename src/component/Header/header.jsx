@@ -11,7 +11,7 @@ const [menuOpened, setMenuOpened]= useState(false);
     return(
         <div className="header">
           <img src={Logo} alt="logo" className="logo"/>
-{(menuOpened===false && mobile===true)?(
+     {(menuOpened===false && mobile===true)?(
     <div style={{
       backgroundColor:'var(--appColor)',
       padding:'0.5rem',
@@ -21,7 +21,7 @@ const [menuOpened, setMenuOpened]= useState(false);
       <img src={Bars} alt="" style={{width:'1.5rem', height:'1.5rem'}} />
     </div>
 ): 
-          <ul className="header-menu">
+          <ul className="header-menu" onClick={()=>setMenuOpened(false)}>
             <li><Link 
             onClick={()=>setMenuOpened(false)}
             activeClass="active"
